@@ -1,0 +1,74 @@
+@import './variables';
+
+@import '~bulma';
+
+@import './elements/elements';
+
+@import '~animate.css';
+
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/scss/font-awesome';
+
+@import '~nprogress/nprogress';
+
+body {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// 改变动画的速率
+.animated {
+  animation-duration: .377s;
+}
+// common
+.is-block {
+  width: 100%;
+}
+.section {
+  background-color: transparent;
+}
+
+.main-content {
+  margin-top: 20px;
+  .tabs .tab-pane{
+    padding: 10px;
+  }
+}
+
+// form
+.input.is-medium, .is-medium.textarea {
+  font-size: 14px;
+}
+.control.has-icon .input.is-medium + .fa, .control.has-icon .is-medium.textarea + .fa {
+  font-size: 20px;
+  top: 8px;
+}
+.has-addons .button.is-medium {
+  font-size: 14px;
+}
+
+
+//footer
+.footer {
+  margin-top: 50px;
+  .content{
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+  }
+}
+//返回顶部
+.gotop{
+  position:fixed;right:2%;bottom:5px;
+  width:40px;height:40px;background:rgba(0,0,0,0.5);
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  i{font-size:2em;color:#fff;margin-top:3px;}
+  &:hover{
+    background:rgba(0,0,0,0.8);
+  }
+}
+
+tr.pointer, i.pointer{
+  cursor: pointer;
+}
