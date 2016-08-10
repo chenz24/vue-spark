@@ -12,6 +12,22 @@
       <modal title="modal弹出" ok-text="确定" :visible.sync="showModal" :on-ok="cb2">
         <p>modal content</p>
       </modal>
+      <div class="block is-flex">
+        <tabs animation="slide" :only-fade="false">
+          <tab-pane label="Pictures">Pictures Tab</tab-pane>
+          <tab-pane label="Music">Music Tab</tab-pane>
+          <tab-pane label="Videos" selected>Video Tab</tab-pane>
+          <tab-pane label="Documents" disabled>Document Tab</tab-pane>
+        </tabs>
+      </div>
+      <div class="column is-flex">
+        <tabs type="toggle">
+          <tab-pane label="Pictures">Pictures Tab</tab-pane>
+          <tab-pane label="Music">Music Tab</tab-pane>
+          <tab-pane label="Videos">Video Tab</tab-pane>
+          <tab-pane label="Documents">Document Tab</tab-pane>
+        </tabs>
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +35,7 @@
 <script>
 import Tooltip from './spark/Tooltip.vue';
 import Modal from './spark/Modal.vue';
+import { Tabs, TabPane } from './spark/tab';
 
 export default {
   data() {
@@ -34,6 +51,8 @@ export default {
   components: {
     Tooltip,
     Modal,
+    Tabs,
+    TabPane,
   },
   methods: {
     cb2() {
