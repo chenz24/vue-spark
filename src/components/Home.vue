@@ -25,7 +25,7 @@
           <tab-pane label="Pictures">Pictures Tab</tab-pane>
           <tab-pane label="Music">Music Tab</tab-pane>
           <tab-pane label="Videos">Video Tab</tab-pane>
-          <tab-pane label="Documents">Document Tab</tab-pane>
+          <tab-pane label="Documents">Document Tab2</tab-pane>
         </tabs>
       </div>
     </div>
