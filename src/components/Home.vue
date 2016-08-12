@@ -29,6 +29,23 @@
         </tabs>
       </div>
     </div>
+    <div class="columns">
+      <div class="column is-3">
+        <dropdown>
+          <div slot="dropdown-content"><p>sadfsdf</p><p>sadfsdf</p><p>sadfsdf</p></div>
+        </dropdown>
+      </div>
+      <div class="column is-3">
+        <dropdown text="下拉菜单">
+          <ul slot="dropdown-menu">
+            <li><a href="javascript:void(0)">link1 link1</a></li>
+            <li><a href="">link1 link1</a></li>
+            <li><a href="">link1 link1</a></li>
+            <li><a href="">link1 link1</a></li>
+          </ul>
+        </dropdown>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -36,6 +53,7 @@
 import Tooltip from './spark/Tooltip.vue';
 import Modal from './spark/Modal.vue';
 import { Tabs, TabPane } from './spark/tab';
+import Dropdown from './spark/Dropdown';
 
 export default {
   data() {
@@ -53,6 +71,7 @@ export default {
     Modal,
     Tabs,
     TabPane,
+    Dropdown,
   },
   methods: {
     cb1() {
