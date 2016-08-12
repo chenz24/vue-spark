@@ -31,7 +31,7 @@
     </div>
     <div class="columns">
       <div class="column is-3">
-        <dropdown>
+        <dropdown text="button下拉" type="button" class="is-primary">
           <div slot="dropdown-content"><p>sadfsdf</p><p>sadfsdf</p><p>sadfsdf</p></div>
         </dropdown>
       </div>
@@ -45,6 +45,17 @@
           </ul>
         </dropdown>
       </div>
+      <div class="column is-3">
+        <dropdown text="button下拉" type="button" class="is-success">
+          <ul slot="dropdown-menu">
+            <li><a href="javascript:void(0)">link1 link1</a></li>
+            <li><a href="">第一个菜单项</a></li>
+            <li><a href="">第二个菜单项</a></li>
+            <li><a href="">第三个菜单项</a></li>
+          </ul>
+        </dropdown>
+      </div>
+
     </div>
   </div>
 </template>

@@ -1,9 +1,14 @@
 <template>
- <div :class="{ dropdown: true, open: show }" v-on-clickaway="clicked">
-   <span class="dropdown-triger" @click="toggle($event)">
+ <div class="dropdown" :class="{ open: show, }" v-on-clickaway="clicked">
+   <span v-if="!type" class="dropdown-trigger {{ class }}" @click="toggle($event)">
      <a href="javascript:void(0)">{{ text }}</a>
      <i class="fa fa-caret-down"></i>
    </span>
+   <a v-if="type==='button'" class="button {{ class }}" @click="toggle($event)">
+     <span>{{ text }}</span>
+     <span class="icon"><i class="fa fa-caret-down"></i></span>
+   </a>
+   <slot name="dropdown-triger"></slot>
    <slot name="dropdown-menu"></slot>
    <slot name="dropdown-content"></slot>
  </div>
@@ -14,7 +19,12 @@ import { mixin as clickaway } from 'vue-clickaway';
 export default {
   mixins: [clickaway],
   props: {
+    type: String,
     text: String,
+    class: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
@@ -52,10 +62,26 @@ export default {
 <style lang="scss">
   .dropdown{
     position: relative;
+    .dropdown-trigger{
+      i{
+        vertical-align: baseline;
+      }
+    }
+    .button{
+      .icon{
+        width: 18px;
+        margin-left: 0;
+        font-size: 16px;
+      }
+    }
+    .dropdown-trigger{
+      cursor: pointer;
+    }
     .dropdown-menu{
       display: none;
       position: absolute;
       top: 100%;
+      margin: 5px 0 0;
       padding: 8px 0 5px;
       z-index: 15;
       list-style: none;
@@ -69,6 +95,9 @@ export default {
         cursor: pointer;
         &:hover{
           background: #f6f6f6;
+        }
+        a{
+          display: block;
         }
       }
     }
