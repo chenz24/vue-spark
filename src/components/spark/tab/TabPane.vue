@@ -30,6 +30,10 @@ export default {
       type: String,
       default: 'out-in',
     },
+    onTabClick: {
+      type: Function,
+      default() {},
+    },
   },
   created() {
     this.isTabPane = true;
@@ -52,7 +56,6 @@ export default {
   /*eslint-disable */
   computed: {
     layout() {
-      console.log('layout');
       return this.$parent.layout;
     },
     direction() {

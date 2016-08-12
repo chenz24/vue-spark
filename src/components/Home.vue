@@ -15,8 +15,8 @@
       <div class="block is-flex">
         <tabs animation="slide" :only-fade="false">
           <tab-pane label="Pictures">Pictures Tab</tab-pane>
-          <tab-pane label="Music">Music Tab</tab-pane>
-          <tab-pane label="Videos" selected>Video Tab</tab-pane>
+          <tab-pane label="Music" :on-tab-click="cb2">{{ msg }}</tab-pane>
+          <tab-pane label="Videos" :on-tab-click="cb1" selected>Video Tab</tab-pane>
           <tab-pane label="Documents" disabled>Document Tab</tab-pane>
         </tabs>
       </div>
@@ -55,6 +55,9 @@ export default {
     TabPane,
   },
   methods: {
+    cb1() {
+      console.log('cb1');
+    },
     cb2() {
       console.log(this.tips);
     },

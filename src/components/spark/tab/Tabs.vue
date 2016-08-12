@@ -74,11 +74,13 @@ export default {
     for (let i = 0, l = this.$tabPanes.length; i < l; ++i) {
       const tabPane = this.$tabPanes[i];
       if (!tabPane.disabled && tabPane.selected) {
+        this.$tabPanes[i]['onTabClick']();
         this.select(i);
         break;
       }
     }
     if (this.selectedIndex === -1) {
+      this.$tabPanes[0]['onTabClick']();
       this.select(0);
     }
   },
@@ -89,6 +91,7 @@ export default {
     select(index) {
       const prevSelectedIndex = this.selectedIndex;
       this.selectedIndex = index;
+      this.$tabPanes[index]['onTabClick']();
       this.$broadcast('on-tab-click', this.selectedIndex, prevSelectedIndex);
     },
   },
