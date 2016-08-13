@@ -30,12 +30,12 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column is-3">
+      <div class="column is-2">
         <dropdown text="button下拉" type="button" class="is-primary">
           <div slot="dropdown-content"><p>sadfsdf</p><p>sadfsdf</p><p>sadfsdf</p></div>
         </dropdown>
       </div>
-      <div class="column is-3">
+      <div class="column is-2">
         <dropdown text="下拉菜单">
           <ul slot="dropdown-menu">
             <li><a href="javascript:void(0)">link1 link1</a></li>
@@ -45,7 +45,7 @@
           </ul>
         </dropdown>
       </div>
-      <div class="column is-3">
+      <div class="column is-2">
         <dropdown text="button下拉" type="button" class="is-success">
           <ul slot="dropdown-menu">
             <li><a href="javascript:void(0)">link1 link1</a></li>
@@ -54,6 +54,15 @@
             <li><a href="">第三个菜单项</a></li>
           </ul>
         </dropdown>
+      </div>
+      <div class="column is-3">
+        <datepicker :config="{ wrap: true }" placeholder="填写日期" readonly>
+          <a class="button" data-toggle><i class="fa fa-calendar"></i></a>
+          <a class="button" data-clear><i class="fa fa-close"></i></a>
+        </datepicker>
+      </div>
+      <div class="column is-2">
+        <datepicker :config="{ }" placeholder="填写日期" readonly></datepicker>
       </div>
 
     </div>
@@ -65,6 +74,7 @@ import Tooltip from './spark/Tooltip.vue';
 import Modal from './spark/Modal.vue';
 import { Tabs, TabPane } from './spark/tab';
 import Dropdown from './spark/Dropdown';
+import Datepicker from './spark/datepicker/Datepicker.vue';
 
 export default {
   data() {
@@ -83,6 +93,7 @@ export default {
     Tabs,
     TabPane,
     Dropdown,
+    Datepicker,
   },
   methods: {
     cb1() {

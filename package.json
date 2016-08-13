@@ -19,6 +19,7 @@
     "bulma": "0.1.0",
     "classnames": "2.2.5",
     "font-awesome": "4.6.3",
+    "flatpickr": "1.9.1",
     "hint.css": "2.3.1",
     "nprogress": "0.2.0",
     "vue": "^1.0.21",
