@@ -61,10 +61,22 @@
           <a class="button" data-clear><i class="fa fa-close"></i></a>
         </datepicker>
       </div>
-      <div class="column is-2">
+      <div class="column">
         <datepicker :config="{ }" placeholder="填写日期" readonly></datepicker>
       </div>
-
+    </div>
+    <div class="columns">
+      <div class="column is-4">
+        <breadcrumb :list="links"></breadcrumb>
+      </div>
+      <div class="column is-4">
+        <breadcrumb>
+          <li><a href="">首页</a></li>
+          <li><a href="">新闻中心</a></li>
+          <li><a href="">国内新闻</a></li>
+          <li><a href="">奥运取得第16金</a></li>
+        </breadcrumb>
+      </div>
     </div>
   </div>
 </template>
@@ -75,6 +87,7 @@ import Modal from './spark/Modal.vue';
 import { Tabs, TabPane } from './spark/tab';
 import Dropdown from './spark/Dropdown';
 import Datepicker from './spark/datepicker/Datepicker.vue';
+import Breadcrumb from './spark/Breadcrumb';
 
 export default {
   data() {
@@ -85,6 +98,12 @@ export default {
       cb: () => {
         console.log(this.msg);
       },
+      links: [
+        { name: '首页', path: '/' },
+        { name: '全部比赛', path: '/tournament' },
+        { name: '创建比赛', path: '/create' },
+        { name: '竞速赛,比赛中...' },
+      ],
     };
   },
   components: {
@@ -94,6 +113,7 @@ export default {
     TabPane,
     Dropdown,
     Datepicker,
+    Breadcrumb,
   },
   methods: {
     cb1() {
