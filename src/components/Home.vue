@@ -88,6 +88,11 @@
         </affix>
       </div>
     </div>
+    <div class="columns">
+      <div class="column is-2">
+        <affix :offset="100"><button class="button">affixed 100px</button></affix>
+      </div>
+    </div>
     <div style="height: 1900px"></div>
   </div>
 </template>
