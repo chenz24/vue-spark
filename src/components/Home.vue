@@ -77,7 +77,18 @@
           <li><a href="">奥运取得第16金</a></li>
         </breadcrumb>
       </div>
+      <div class="column">
+        <affix>
+          <div class="notification">
+            <button class="delete"></button>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit lorem ipsum dolor sit amet,
+            consectetur adipiscing elit
+          </div>
+        </affix>
+      </div>
     </div>
+    <div style="height: 1900px"></div>
   </div>
 </template>
 
@@ -88,6 +99,7 @@ import { Tabs, TabPane } from './spark/tab';
 import Dropdown from './spark/Dropdown';
 import Datepicker from './spark/datepicker/Datepicker.vue';
 import Breadcrumb from './spark/Breadcrumb';
+import Affix from './spark/Affix';
 
 export default {
   data() {
@@ -114,6 +126,7 @@ export default {
     Dropdown,
     Datepicker,
     Breadcrumb,
+    Affix,
   },
   methods: {
     cb1() {

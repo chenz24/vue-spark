@@ -12,7 +12,7 @@ export default {
   props: {
     list: {
       type: Array,
-      default: [],
+      default: () => { []; },
     },
     separator: {
       type: String,
