@@ -13,7 +13,7 @@
         <p>modal content</p>
       </modal>
       <div class="block is-flex">
-        <tabs animation="slide" :only-fade="false">
+        <tabs animation="fade" :only-fade="false">
           <tab-pane label="Pictures">Pictures Tab</tab-pane>
           <tab-pane label="Music" :on-tab-click="cb2">{{ msg }}</tab-pane>
           <tab-pane label="Videos" :on-tab-click="cb1" selected>Video Tab</tab-pane>
@@ -98,7 +98,22 @@
     </div>
     <div style="height: 1900px"></div>
   </div>
-  <aside :show.sync="showAside"></aside>
+  <aside :show.sync="showAside" placement="right" title="aside标题" :width="320"></aside>
+  <aside :show.sync="showAside" title="aside标题 left">
+    <div class="columns">
+      <div class="column is-4">
+        <breadcrumb :list="links"></breadcrumb>
+      </div>
+      <div class="column is-4">
+        <breadcrumb>
+          <li><a href="">首页</a></li>
+          <li><a href="">新闻中心</a></li>
+          <li><a href="">国内新闻</a></li>
+          <li><a href="">奥运取得第16金</a></li>
+        </breadcrumb>
+      </div>
+    </div>
+  </aside>
 </template>
 
 <script>

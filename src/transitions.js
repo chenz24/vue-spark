@@ -16,9 +16,19 @@ Vue.transition('fade-horizontal-ltr', {
   leaveClass: 'fadeOutRight',
 });
 
+Vue.transition('fade-horizontal-ltl', {
+  enterClass: 'fadeInLeft',
+  leaveClass: 'fadeOutLeft',
+});
+
 Vue.transition('slide-horizontal-rtl', {
   enterClass: 'slideInRight',
   leaveClass: 'slideOutLeft',
+});
+
+Vue.transition('slide-horizontal-rtr', {
+  enterClass: 'slideInRight',
+  leaveClass: 'slideOutRight',
 });
 
 Vue.transition('slide-horizontal-ltr', {
