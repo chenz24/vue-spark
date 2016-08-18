@@ -93,8 +93,12 @@
         <affix :offset="100"><button class="button">affixed 100px</button></affix>
       </div>
     </div>
+    <div class="columns">
+      <div class="column is-2"><button class="button" @click="showAside = true">Aside</button></div>
+    </div>
     <div style="height: 1900px"></div>
   </div>
+  <aside :show.sync="showAside"></aside>
 </template>
 
 <script>
@@ -105,6 +109,7 @@ import Dropdown from './spark/Dropdown';
 import Datepicker from './spark/datepicker/Datepicker.vue';
 import Breadcrumb from './spark/Breadcrumb';
 import Affix from './spark/Affix';
+import Aside from './spark/Aside';
 
 export default {
   data() {
@@ -112,6 +117,7 @@ export default {
       msg: 'Hello World!',
       tips: 'show tips',
       showModal: false,
+      showAside: false,
       cb: () => {
         console.log(this.msg);
       },
@@ -132,6 +138,7 @@ export default {
     Datepicker,
     Breadcrumb,
     Affix,
+    Aside,
   },
   methods: {
     cb1() {
