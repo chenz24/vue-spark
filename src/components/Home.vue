@@ -95,8 +95,9 @@
     </div>
     <div class="columns">
       <div class="column is-2"><button class="button" @click="showAside = true">Aside</button></div>
+      <div class="column is-2"><button class="button" @click="notify()">Notify</button></div>
     </div>
-    <div style="height: 1900px"></div>
+    <div style="height: 1920px"></div>
   </div>
   <aside :show.sync="showAside" placement="right" title="aside标题" :width="320"></aside>
   <aside :show.sync="showAside" title="aside标题 left">
@@ -125,6 +126,7 @@ import Datepicker from './spark/datepicker/Datepicker.vue';
 import Breadcrumb from './spark/Breadcrumb';
 import Affix from './spark/Affix';
 import Aside from './spark/Aside';
+import Notify from './spark/notify';
 
 export default {
   data() {
@@ -154,6 +156,7 @@ export default {
     Breadcrumb,
     Affix,
     Aside,
+
   },
   methods: {
     cb1() {
@@ -161,6 +164,9 @@ export default {
     },
     cb2() {
       console.log(this.tips);
+    },
+    notify() {
+      Notify.open();
     },
   },
 };
