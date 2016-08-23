@@ -166,7 +166,10 @@ export default {
       console.log(this.tips);
     },
     notify() {
-      Notify.open();
+      const loading = Notify.loading({ title: '测试', message: 'this is a test msg' });
+      setTimeout(() => {
+        loading.$destroy(true);
+      }, 1500);
     },
   },
 };

@@ -2,7 +2,7 @@
   <div :class="['notification', 'animated', type ? `is-${type}` : '']" :transition="transition" transition-mode="in-out">
     <button class="delete touchable" @click="close()"></button>
     <div class="title is-5" v-if="title">{{ title }}</div>
-    阿斯顿发斯蒂芬
+    {{ message }}
   </div>
 </template>
 <script>
