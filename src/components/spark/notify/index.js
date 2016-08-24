@@ -31,7 +31,7 @@ export default{
     return open(propsData);
   },
   loading(params) {
-    const defaultPara = { type: 'info', direction: 'right', duration: 0 };
+    const defaultPara = { type: 'loading', direction: 'right', duration: 0 };
     const propsData = Object.assign(defaultPara, params);
     return open(propsData);
   },

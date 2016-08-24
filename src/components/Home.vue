@@ -96,6 +96,7 @@
     <div class="columns">
       <div class="column is-2"><button class="button" @click="showAside = true">Aside</button></div>
       <div class="column is-2"><button class="button" @click="notify()">Notify</button></div>
+      <div class="column is-2"><button class="button" @click="notifyTitle()">Notify With Title</button></div>
     </div>
     <div style="height: 1920px"></div>
   </div>
@@ -166,10 +167,13 @@ export default {
       console.log(this.tips);
     },
     notify() {
-      const loading = Notify.loading({ title: '测试', message: 'this is a test msg' });
+      const loading = Notify.loading({ message: '云主机启动中...' });
       setTimeout(() => {
         loading.$destroy(true);
-      }, 1500);
+      }, 155500);
+    },
+    notifyTitle() {
+      Notify.success({ title: '成功', message: '删除主机成功!' });
     },
   },
 };
