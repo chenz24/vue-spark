@@ -97,6 +97,16 @@
       <div class="column is-2"><button class="button" @click="showAside = true">Aside</button></div>
       <div class="column is-2"><button class="button" @click="notify()">Notify</button></div>
       <div class="column is-2"><button class="button" @click="notifyTitle()">Notify With Title</button></div>
+      <div class="column">
+        <timeline>
+          <timeline-item date="Sun, 11 Feb" icon="twitter">asdfasdfasdf</timeline-item>
+          <timeline-item >
+            <p>adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p><a href="">news center</a></p>
+          </timeline-item>
+          <timeline-item date="3 minutes ago" icon="wechat">90980</timeline-item>
+        </timeline>
+      </div>
     </div>
     <div style="height: 1920px"></div>
   </div>
@@ -128,6 +138,7 @@ import Breadcrumb from './spark/Breadcrumb';
 import Affix from './spark/Affix';
 import Aside from './spark/Aside';
 import Notify from './spark/notify';
+import { Timeline, TimelineItem } from './spark/timeline';
 
 export default {
   data() {
@@ -157,7 +168,8 @@ export default {
     Breadcrumb,
     Affix,
     Aside,
-
+    Timeline,
+    TimelineItem,
   },
   methods: {
     cb1() {

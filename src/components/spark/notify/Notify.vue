@@ -104,10 +104,16 @@ export default {
 
 .notifications {
   position: fixed;
-  top: 20px;
+  top: 0px;
   right: 0;
   z-index: 1024 + 233;
   pointer-events: none;
+
+  &.top-center{
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
 
   @include tablet() {
     max-width: 320px;
