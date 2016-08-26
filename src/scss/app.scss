@@ -15,6 +15,10 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+body, button, input, select, textarea {
+  font-family: PingFang SC,Hiragino Sans GB,Arial,Microsoft YaHei,Helvetica Neue,sans-serif;
+}
+
 // 改变动画的速率
 .animated {
   animation-duration: .377s;

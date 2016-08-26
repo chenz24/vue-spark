@@ -108,6 +108,11 @@
         </timeline>
       </div>
     </div>
+    <div class="columns">
+      <div class="column is-3">
+        <menu></menu>
+      </div>
+    </div>
     <div style="height: 1920px"></div>
   </div>
   <aside :show.sync="showAside" placement="right" title="aside标题" :width="320"></aside>
@@ -139,6 +144,7 @@ import Affix from './spark/Affix';
 import Aside from './spark/Aside';
 import Notify from './spark/notify';
 import { Timeline, TimelineItem } from './spark/timeline';
+import Menu from './spark/menu/Menu.vue';
 
 export default {
   data() {
@@ -170,6 +176,7 @@ export default {
     Aside,
     Timeline,
     TimelineItem,
+    Menu,
   },
   methods: {
     cb1() {
