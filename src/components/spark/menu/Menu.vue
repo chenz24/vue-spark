@@ -22,11 +22,11 @@
     </p>
     <ul class="menu-list">
       <li><a href="#"><i class="fa fa-qq"></i>Team Settings</a></li>
-      <li>
-        <a class="is-active" href="#">
+      <li class="is-active">
+        <a class="is-active" href="#" @click="toggleOpen()">
           <i class="fa fa-twitter"></i>
           Manage Your Team
-          <span class="nav-caret"><i class="fa fa-caret-down"></i></span>
+          <span class="nav-right"><i class="fa fa-caret-down"></i></span>
         </a>
         <ul>
           <li><a href="#">Members</a></li>
@@ -49,6 +49,11 @@
 </template>
 <script>
 export default {
+  methods: {
+    toggleOpen() {
+
+    },
+  },
 };
 </script>
 <style lang="scss">
@@ -78,8 +83,25 @@ export default {
 .menu-label{
   padding: 0 17px;
 }
+.menu-list{
+  li{
+    ul{
+      border-left: none;
+      margin: 0;
+      padding-left: 0;
+    }
+  }
+  & > li li{
+    a{
+      padding-left: 50px;
+    }
+  }
+  & > li.is-active{
+    background-color: rgba(0,0,0,.065);
+  }
+}
 .menu-list a{
-  padding: 5px 17px;
+  padding: 5px 16px;
   line-height: 25px;
   border-radius: 0;
   color: #000;
@@ -89,8 +111,11 @@ export default {
     margin-right: 15px;
     line-height: 23px;
   }
-  .nav-caret{
+  .nav-right{
     float: right;
+    i{
+      margin-right: 0;
+    }
   }
 }
 </style>
