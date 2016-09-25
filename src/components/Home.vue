@@ -124,6 +124,10 @@
           </tab-pane>
         </tabs>
       </div>
+      <div class="column is-2">
+        <tag type="primary" size="small" :closable="true">标签</tag>
+        <tag type="success" size="">标签1</tag>
+      </div>
     </div>
     <div style="height: 1920px"></div>
   </div>
@@ -157,6 +161,7 @@ import Aside from './spark/Aside';
 import Notify from './spark/notify';
 import { Timeline, TimelineItem } from './spark/timeline';
 import Menu from './spark/menu/Menu.vue';
+import Tag from './spark/Tag.vue';
 
 export default {
   data() {
@@ -189,6 +194,7 @@ export default {
     Timeline,
     TimelineItem,
     Menu,
+    Tag,
   },
   methods: {
     cb1() {
