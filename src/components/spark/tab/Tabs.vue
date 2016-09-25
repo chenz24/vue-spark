@@ -69,6 +69,9 @@ export default {
     $tabPanes() {
       return this.$children.filter(child => child.isTabPane);
     },
+    isFlex() {
+      return this.type !== '';
+    },
   },
   ready() {
     for (let i = 0, l = this.$tabPanes.length; i < l; ++i) {
@@ -193,6 +196,45 @@ export default {
             a {
               border-left-color: $turquoise;
             }
+          }
+        }
+      }
+    }
+  }
+  .is-slideshow{
+    .tab-content{
+      margin: 0;
+    }
+    .tab-list{
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      z-index: 15;
+      width: 60%;
+      padding-left: 0;
+      margin-left: -30%;
+      border: none;
+      text-align: center;
+      list-style: none;
+      li{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 1px 2px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #000 \9;
+        background-color: rgba(0,0,0,0);
+        border: 1px solid #fff;
+        border-radius: 10px;
+        a{
+          border: none;
+        }
+        &.is-active{
+          background: #fff;
+          a{
+            /*background: #fff;*/
           }
         }
       }
