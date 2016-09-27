@@ -79,12 +79,11 @@
       </div>
       <div class="column">
         <affix>
-          <div class="notification">
-            <button class="delete"></button>
+          <alert :closable="true" title="请注意,倒车!" type="info">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit lorem ipsum dolor sit amet,
             consectetur adipiscing elit
-          </div>
+          </alert>
         </affix>
       </div>
     </div>
@@ -162,6 +161,7 @@ import Notify from './spark/notify';
 import { Timeline, TimelineItem } from './spark/timeline';
 import Menu from './spark/menu/Menu.vue';
 import Tag from './spark/Tag.vue';
+import Alert from './spark/Alert.vue';
 
 export default {
   data() {
@@ -195,6 +195,7 @@ export default {
     TimelineItem,
     Menu,
     Tag,
+    Alert,
   },
   methods: {
     cb1() {
