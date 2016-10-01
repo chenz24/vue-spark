@@ -1,5 +1,5 @@
 <template>
-  <span class="tag" :class="{ [`is-${type}`]: type, [`is-${size}`]: size }">
+  <span class="tag" :class="{ [`is-${type}`]: type, [`is-${size}`]: size, animated: true }">
     <slot></slot>
     <button v-if="closable" class="delete"
             :class="{ [`is-${size}`]: size }" @click="close"></button>

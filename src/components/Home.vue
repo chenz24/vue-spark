@@ -128,6 +128,14 @@
         <tag type="success" size="">标签1</tag>
       </div>
     </div>
+    <div class="columns">
+      <div class="column">
+        <progress-bar :percent="45" type="danger"></progress-bar>
+        <progress-bar :percent="percent" type="danger" :striped="true" :animated="true" :showinfo="true"></progress-bar>
+        <button class="button is-info" @click="setPercent(85)">85%</button>
+        <button class="button is-info" @click="setPercent(50)">50%</button>
+      </div>
+    </div>
     <div style="height: 1920px"></div>
   </div>
   <aside :show.sync="showAside" placement="right" title="aside标题" :width="320"></aside>
@@ -162,6 +170,7 @@ import { Timeline, TimelineItem } from './spark/timeline';
 import Menu from './spark/menu/Menu.vue';
 import Tag from './spark/Tag.vue';
 import Alert from './spark/Alert.vue';
+import ProgressBar from './spark/ProgressBar.vue';
 
 export default {
   data() {
@@ -170,6 +179,7 @@ export default {
       tips: 'show tips',
       showModal: false,
       showAside: false,
+      percent: 45,
       cb: () => {
         console.log(this.msg);
       },
@@ -196,6 +206,7 @@ export default {
     Menu,
     Tag,
     Alert,
+    ProgressBar,
   },
   methods: {
     cb1() {
@@ -212,6 +223,9 @@ export default {
     },
     notifyTitle() {
       Notify.success({ title: '成功', message: '删除主机成功!' });
+    },
+    setPercent(val) {
+      this.percent = val;
     },
   },
 };
