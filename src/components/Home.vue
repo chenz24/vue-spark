@@ -136,6 +136,18 @@
         <button class="button is-info" @click="setPercent(50)">50%</button>
       </div>
     </div>
+    <div class="columns">
+      <div class="column is-3">
+        <collapse accordion>
+          <collapse-item title="Component">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit lorem ipsum dolor sit amet,
+            consectetur adipiscing elit</collapse-item>
+          <collapse-item title="Component2" isactive>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit lorem ipsum dolor sit amet,
+            consectetur adipiscing elit</collapse-item>
+        </collapse>
+      </div>
+    </div>
     <div style="height: 1920px"></div>
   </div>
   <aside :show.sync="showAside" placement="right" title="aside标题" :width="320"></aside>
@@ -171,6 +183,7 @@ import Menu from './spark/menu/Menu.vue';
 import Tag from './spark/Tag.vue';
 import Alert from './spark/Alert.vue';
 import ProgressBar from './spark/ProgressBar.vue';
+import { Collapse, CollapseItem } from './spark/collapse';
 
 export default {
   data() {
@@ -207,6 +220,8 @@ export default {
     Tag,
     Alert,
     ProgressBar,
+    Collapse,
+    CollapseItem,
   },
   methods: {
     cb1() {
