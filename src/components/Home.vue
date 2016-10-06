@@ -89,7 +89,7 @@
     </div>
     <div class="columns">
       <div class="column is-2">
-        <affix :offset="100"><button class="button">affixed 100px</button></affix>
+        <affix :offset="300"><button class="button">affixed 100px</button></affix>
       </div>
     </div>
     <div class="columns">
@@ -147,6 +147,19 @@
             consectetur adipiscing elit</collapse-item>
         </collapse>
       </div>
+      <div class="column is-9">
+        <steps type="line" :current="0">
+          <step :title="title" description="举头望明月">
+            <p>1.床前明月光，疑是地上霜。举头望明月，低头思故乡</p>
+          </step>
+          <step title="Eating" description="春晓">
+            <p>2.春眠不觉晓，处处闻啼鸟。夜来风雨声，花落知多少。</p>
+          </step>
+          <step title="Swimming" description="春夜喜雨">
+            <p>3.好雨知时节，当春乃发生。随风潜入夜，润物细无声</p>
+          </step>
+        </steps>
+      </div>
     </div>
     <div style="height: 1920px"></div>
   </div>
@@ -184,6 +197,8 @@ import Tag from './spark/Tag.vue';
 import Alert from './spark/Alert.vue';
 import ProgressBar from './spark/ProgressBar.vue';
 import { Collapse, CollapseItem } from './spark/collapse';
+import Steps from './spark/step/Steps.vue';
+import Step from './spark/step/Step.vue';
 
 export default {
   data() {
@@ -192,6 +207,7 @@ export default {
       tips: 'show tips',
       showModal: false,
       showAside: false,
+      title: 'Shopping',
       percent: 45,
       cb: () => {
         console.log(this.msg);
@@ -222,6 +238,8 @@ export default {
     ProgressBar,
     Collapse,
     CollapseItem,
+    Steps,
+    Step,
   },
   methods: {
     cb1() {
