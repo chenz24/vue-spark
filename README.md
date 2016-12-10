@@ -1,8 +1,6 @@
 ## Affix 固钉
 
 将元素钉在固定位置，常用于顶部菜单或者侧边菜单
-<div class="columns">
-  <div class="column is-6">
 
 ::: demo
 <summary>
@@ -16,8 +14,6 @@
 </tooltip>
 ```
 :::
-  </div>
-  <div class="column is-6">
 
 ::: demo
 <summary>
@@ -31,6 +27,4 @@
 </tooltip>
 ```
 :::
-  </div>
-</div>
 
