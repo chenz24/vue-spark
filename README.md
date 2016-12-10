@@ -1,27 +1,36 @@
-# vue-spark
+## Affix 固钉
 
-> A Vue.js project
+将元素钉在固定位置，常用于顶部菜单或者侧边菜单
+<div class="columns">
+  <div class="column is-6">
 
-## Build Setup
+::: demo
+<summary>
+  #### 基本
+  最简单的用法
+</summary>
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+```html
+<tooltip content="测试内容" :always="false" placement="topLeft" trigger="">
+  <button class="button is-primary">tooltip button</button>
+</tooltip>
 ```
+:::
+  </div>
+  <div class="column is-6">
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+::: demo
+<summary>
+  #### 基本
+  最简单的用法
+</summary>
+
+```html
+<tooltip content="测试内容" :always="false" placement="topLeft" trigger="">
+  <button class="button is-primary">tooltip button</button>
+</tooltip>
+```
+:::
+  </div>
+</div>
+
